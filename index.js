@@ -43,14 +43,12 @@ const run = async () => {
     try {
         await client.connect();
         const fruitCollection = client.db('stock').collection('fruit');
-
-    
+ 
         app.post('/login', (req, res) => {
         const email = req.body;
         const token = jwt.sign(email, process.env.SECRET_KEY)
         res.send({ token });
 })
-
 
         app.put('/fruits/:id', async (req, res) => {
             const id = req.params.id;
@@ -133,3 +131,4 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log('Backend server running port', port);
 })
+// end 

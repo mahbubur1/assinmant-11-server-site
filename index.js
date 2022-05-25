@@ -33,7 +33,7 @@ function verifyJWT(req, res, next) {
         }
     })
 }
-//start 
+ 
 const uri = "mongodb+srv://mahbuburRhaman:pF0kvXWltvgH4UMW@cluster0.eonms.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
@@ -130,4 +130,3 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log('Backend server running port', port);
 })
-// end 

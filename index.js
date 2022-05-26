@@ -93,7 +93,6 @@ const run = async () => {
             else {
                 res.status(403).send({ message: 'Forbidden access' })
             }
-            
         })
 
         app.get('/fruits', async (req, res) => {
@@ -105,7 +104,6 @@ const run = async () => {
             const fruits = await cursor.toArray();
             res.send(fruits);
         })
-
 
         app.post('/fruits',  async (req, res) => {
             const newItem = req.body;
